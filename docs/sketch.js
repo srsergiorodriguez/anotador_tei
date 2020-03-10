@@ -38,14 +38,20 @@ function loadXMLui() {
   let loadXML_Btn = createButton("Cargar");
   loadXML_Btn.parent("#load_ui_container");
   loadXML_Btn.mouseReleased(()=>{
-    if (loadXML.value()=="") {
+    if (loadXML.value()!="") {
       console.log(loadXML.value());
-      //url = loadXML.value();
+      url = loadXML.value();
       defineXML();
     } else {
-      alert("Carga un archivo XML primero");
+      defineXML();
+      console.log("Se cargó un XML de prueba")
+      //alert("Carga un archivo XML primero");
     }
   })
+}
+
+function defineXML() {
+  loadXML(url, loadUI);
 }
 
 function newLabel() {
@@ -119,10 +125,6 @@ function setConventions() {
   }
   if (select("#label_styling")) {select("#label_styling").remove();}
   createElement("style", styling).id("label_styling");
-}
-
-function defineXML() {
-  loadXML(url, loadUI);
 }
 
 function loadUI(xml_input) {
