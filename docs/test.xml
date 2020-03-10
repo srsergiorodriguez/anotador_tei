@@ -1,0 +1,29 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+	<teiHeader>
+		<fileDesc>
+			<titleStmt><title>Untitled Document</title><author/></titleStmt>
+			<editionStmt><edition><date/></edition></editionStmt>
+			<publicationStmt><p>no publication statement available</p></publicationStmt>
+			<sourceDesc><p>Written by OpenOffice</p></sourceDesc>
+		</fileDesc>
+		<revisionDesc><listChange><change><name/><date/></change></listChange></revisionDesc>
+	</teiHeader>
+	<text>
+		<body>
+			<div type="encabezado">
+				<head type="volada">DIPUTADO DÍAZ LEÓN:</head>
+				<head type="titular">“En el Perú no hay presos políticos”</head>
+				<head type="bajada"/>
+			</div>
+			<div type="cuerpo">
+				<p>El ex presidente de la Comisión de Derechos Humanos de la Cámara Baja, diputado (AP) Jorge Diaz León enfatizó que en nuestro país no existe ningún preso politico y acusó a los terroristas como los verdaderos violadores de los derechos del hombre.</p>
+				<p>“Claro que son ellos. porque asesinan a personas inocentes, a policías y atentan contra la propiedad privada que es uno de los derechos de hombre". agregó el parlamentarlo populista.</p>
+				<p>Expresó su decisión de comparecer ante la Comisión Especial de Derechos Humanos de las Naciones Unidas, que llegará al Perú próximamente, a fin de aclarar la verdadera vigencia de la Declaración Universal de los Derechos Humanos en el país.</p>
+				<p>"Yo he comparecido ante ellos el año pasado en Costa Rica y Nueva York. En ese entonces era presidente de la Comisión, pero ahora igual puedo hacerlo”, agregó Díaz León.</p>
+				<p>Con relación a las denuncias sobre desapariciones de personas en la zona de emergencia, manifestó que muchos de estos expedientes carecen de fundamento legal y procesal.</p>
+				<p>"Hasta el mismo Miguel Cavero Egúsquiza que es un hombre de la oposición y era Fiscal de la Nación declaró infundados tales denuncias por estar mal hechas".</p>
+			</div>
+			<div type="leyenda"/>
+		</body>
+	</text>
+</TEI>

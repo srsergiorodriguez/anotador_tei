@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>p5.js example</title>
+    <style>
+      body {
+        padding: 0;
+        margin: 0;
+      }
+
+      #labels_container {
+        box-sizing: border-box;
+        display: none;
+        width: 250px;
+        max-height: 500px;
+        border: solid 1px black;
+        position: fixed;
+        top: 10px;
+        left: 5px;
+        padding: 10px;
+        overflow: scroll;
+      }
+
+      #title {
+        box-sizing: border-box;
+        margin: auto;
+        width: 700px;
+        border: solid 1px black;
+        text-align: center;
+      }
+
+      h1 {
+        font-size: 20px;
+      }
+
+      #load_ui_container {
+        box-sizing: border-box;
+        margin: auto;
+        width: 700px;
+        border: solid 1px black;
+        padding: 20px;
+      }
+
+      #anotator_container {
+        box-sizing: border-box;
+        margin: auto;
+        width: 700px;
+        border: solid 1px black;
+        padding: 20px;
+      }
+      
+      #ui_container {
+        padding: 20px 0px;
+      }
+
+      textarea {
+        width: 100%;
+        min-height: 300px;
+      }
+
+      footer {
+        margin: auto;
+        text-align: center;
+        font-size: 12px;
+      }
+    </style>
+    <script src="p5.min.js"></script>
+    <script src="sketch.js"></script>
+  </head>
+  <body>
+    <div id="title">
+      <h1>Anotador TEI</h1>
+    </div>
+    <div id="labels_container">
+      <p>Selecciona la etiqueta:</p>
+      <div id="conventions"></div>
+    </div>
+    <div id="load_ui_container"></div>
+    <div id="anotator_container">
+      <div id=text_container></div>
+      <div id=ui_container></div>
+      <div id=output_container></div>
+    </div>
+    <footer>
+      <p>Por Sergio Rodríguez Gómez - 2020 — MIT LICENSE</p>
+      <p>Este software se puede copiar, modificar y distribuir libremente</p>
+    </footer>
+  </body>
+</html>
