@@ -34,18 +34,19 @@ function setup() {
 function loadXMLui() {
   let loadXML = createElement("input");
   loadXML.parent("load_ui_container");
+  loadXML.id("xml_file");
   loadXML.attribute("type", "file");
+  loadXML.attribute("accept", "text/xml");
   let loadXML_Btn = createButton("Cargar");
   loadXML_Btn.parent("#load_ui_container");
   loadXML_Btn.mouseReleased(()=>{
     if (loadXML.value()!="") {
-      console.log(loadXML.value());
-      url = loadXML.value();
+      let reader = new FileReader();
+      let file = document.getElementById('xml_file').files[0];
+      url = window.URL.createObjectURL(file);
       defineXML();
     } else {
-      defineXML();
-      console.log("Se cargó un XML de prueba")
-      //alert("Carga un archivo XML primero");
+      alert("Carga un archivo XML primero");
     }
   })
 }
@@ -159,7 +160,7 @@ function createHTMLelements() {
     cuerpo_elements[i].parent("text_container");
   });
   leyenda.map((XMLelement,i)=>{
-    leyenda_elements[i] = createP(XMLelement.getContent());
+    leyenda_elements[i] = createElement("h2",XMLelement.getContent());
     leyenda_elements[i].parent("text_container");
   });
 }
