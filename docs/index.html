@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <title>Anotador Tei</title>
+    <script src="p5.min.js"></script>
     <style>
       body {
         padding: 0;
@@ -12,6 +13,7 @@
 
       #labels_container {
         box-sizing: border-box;
+        background: white;
         display: none;
         width: 250px;
         max-height: 500px;
@@ -21,6 +23,31 @@
         left: 5px;
         padding: 10px;
         overflow: scroll;
+      }
+
+      #attr_checkbox {
+        padding: 10px 0px 0px 0px;
+      }
+
+      #attributes_container {
+        box-sizing: border-box;
+        background: white;
+        display: none;
+        width: 400px;
+        max-height: 300px;
+        border: solid 1px black;
+        position: fixed;
+        top: 50px;
+        left: 50px;
+        padding: 10px;
+        overflow: scroll;
+      }
+
+      #attributes_subcontainer {
+        box-sizing: border-box;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding: 0px 0px 20px 0px;
       }
 
       #title {
@@ -40,10 +67,11 @@
         margin: auto;
         width: 700px;
         border: solid 1px black;
-        padding: 20px;
+        padding: 10px;
       }
 
       #anotator_container {
+        display: none;
         box-sizing: border-box;
         margin: auto;
         width: 700px;
@@ -51,8 +79,12 @@
         padding: 20px;
       }
       
-      #ui_container {
+      #button_container {
         padding: 20px 0px;
+      }
+
+      .conventions_p {
+        text-align: center;
       }
 
       textarea {
@@ -63,29 +95,33 @@
       footer {
         margin: auto;
         text-align: center;
-        font-size: 12px;
+        font-size: 11px;
       }
     </style>
-    <script src="p5.min.js"></script>
-    <script src="sketch.js"></script>
   </head>
   <body>
     <div id="title">
       <h1>Anotador TEI</h1>
     </div>
-    <div id="labels_container">
-      <p>Selecciona la etiqueta:</p>
-      <div id="conventions"></div>
+    <div id="labels_position">
+      <div id="labels_container">
+      </div>
     </div>
-    <div id="load_ui_container"></div>
+    <div id="attributes_position">
+      <div id="attributes_container">
+      </div>
+    </div>
+    <div id="load_ui_container">
+      <p>Carga un archivo XML preformateado en el esquema TEI:</p>
+    </div>
     <div id="anotator_container">
       <div id=text_container></div>
-      <div id=ui_container></div>
+      <div id=button_container></div>
       <div id=output_container></div>
     </div>
     <footer>
-      <p>Por Sergio Rodríguez Gómez - 2020 — MIT LICENSE</p>
-      <p>Este software se puede copiar, modificar y distribuir libremente</p>
+      <p>Por Sergio Rodríguez Gómez — <span id="date"></span> — V. 0.2 — MIT LICENSE: Este software se puede copiar, modificar y distribuir libremente</p>
     </footer>
   </body>
+  <script src="sketch.js"></script>
 </html>

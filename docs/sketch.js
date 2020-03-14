@@ -7,31 +7,46 @@
 let url = 'test.xml';
 let xml;
 let current = {
-  label: "persName",
-  selection: null
+  label: "persName", // El label inicial del DOM select
+  selection: null, // La selección de texto actual
+  range: null, // El rango de texto actual (se actualiza con el botón etiquetar)
+  attrkeys: [], // Las claves de los atributos actuales
+  attrvalues: [] // Los valores de los atributos actuales
 }
 
-let encabezado;
-let cuerpo;
-let leyenda;
-let encabezado_elements = [];
-let cuerpo_elements = [];
-let leyenda_elements = [];
+let attrCheckbox; // Checkbox para definir si se añaden atributos
+let attrSelection = false; // ¿Se añaden atributos?
 
+let encabezado; // Contiene el valor del div de tipo encabezado
+let cuerpo; // Contiene el valor del div de tipo cuerpo
+let leyenda; // Contiene el valor del div de tipo leyenda
+let encabezado_elements = []; // Contiene los elementos child del div encabezado
+let cuerpo_elements = []; // Contiene los elementos child del div cuerpo
+let leyenda_elements = []; // Contiene los elementos child del div leyenda
+
+// Una lista de labels por defecto
+// TODO: poner aquí los labels TEI más comunes
+// TODO2: incluir la opción de agregar sub esquemas TEI
 let label_list = ["persName", "placeName", "orgName", "q", "label"];
+
+// Una lista de colores por defecto
+// Si se añaden nuevas etiquetas, se añaden colores aleatorios a esta lista
 let color_list = ["#99ff66", "#bf80ff", "#ff6699", "#3399ff", "#ffcc00", "#ffff66", "#669999"];
+
+// El elemento select que contiene los lables de label_list
 let select_label;
 
+// Un elemento textarea en el que se muestra el XML codificado final
 let output;
 
 function setup() {
   noCanvas();
   loadXMLui();
-  output = createElement("textarea", "");
-  output.parent("output_container");
+  select("#date").html(`${new Date().getFullYear()}`);
 }
 
 function loadXMLui() {
+  // Muestra la interfaz inicial de carga de archivos
   let loadXML = createElement("input");
   loadXML.parent("load_ui_container");
   loadXML.id("xml_file");
@@ -52,96 +67,28 @@ function loadXMLui() {
 }
 
 function defineXML() {
-  loadXML(url, loadUI);
-}
-
-function newLabel() {
-  if (select("#new_label")) {
-    select("#new_label").remove();
-    select("#new_label_btn").remove();
-  }
-  let inp = createInput("nueva etiqueta")
-  inp.id("new_label")
-  .parent("labels_container")
-  createButton("agregar")
-  .id("new_label_btn")
-  .parent("labels_container")
-  .mouseReleased(()=>{
-    if (!label_list.includes(inp.value())) {
-      label_list.push(inp.value());
-      color_list.push(randomHexColor());
-      defineCurrentLabel();
-    } else {
-      alert("La etiqueta ya existe");
-    }
-  });
-}
-
-function defineCurrentLabel() {
-  select("#labels_container").show();
-  setOptions();
-  setButton();
-  setConventions();
-  newLabel();
-}
-
-function setButton() {
-  if (select("#label_btn")) {select("#label_btn").remove();}
-  let labelBtn = createButton("Etiquetar").id("label_btn");
-  labelBtn.parent("labels_container");
-  labelBtn.mouseReleased(()=>{
-    if (current.selection) {
-      addLabel();
-    } else {
-      console.log(current.selection);
-    }
-  }); 
-}
-
-function setOptions() {
-  if (select("#select_label")) {select("#select_label").remove();}
-  select_label = createSelect().id("select_label");
-  select_label.parent("labels_container");
-  for (const e of label_list) {
-    select_label.option(e);
-  }
-}
-
-function setConventions() {
-  select("#conventions").remove();
-  let conv = createDiv("")
-  conv.id("conventions").parent("labels_container");
-  createP("Convenciones:").parent("conventions");
-  let styling = "";
-  for (let e in label_list) {
-    createP(label_list[e])
-    .parent("conventions")
-    .style("background", color_list[e]);
-
-    styling+=`
-    ${label_list[e]} {
-      background: ${color_list[e]};
-    }
-    `
-  }
-  if (select("#label_styling")) {select("#label_styling").remove();}
-  createElement("style", styling).id("label_styling");
+  loadXML(url,loadUI);
 }
 
 function loadUI(xml_input) {
+  select("#anotator_container").show();
   xml = xml_input;
   let divs = xml.getChild("text").getChild("body").getChildren();
   getXMLelements(divs);
   createHTMLelements();
-  anotateHTMLelements();
-  defineCurrentLabel();
+  highlightHTMLelements();
 
-  let saveBtn = createButton("Exportar anotación");
-  saveBtn.parent("ui_container");
+  showLabelingUI();
+  if (select("#save_btn")) {select("#save_btn").remove()}
+  let saveBtn = createButton("Exportar anotación").id("save_btn");
+  saveBtn.parent("button_container");
   saveBtn.mouseReleased(()=>{
-    console.log(xml.serialize());
     output.html(xml.serialize());
-  })
+  });
+
+  if (select("#output_export")) {select("#output_export").remove()}
+  output = createElement("textarea", "").id("output_export");
+  output.parent("output_container");
 }
 
 function getXMLelements(divs) {
@@ -151,21 +98,23 @@ function getXMLelements(divs) {
 }
 
 function createHTMLelements() {
+  if (select("#text_subcontainer")) {select("#text_subcontainer").remove()}
+  createDiv("").id("text_subcontainer").parent("text_container");
   encabezado.map((XMLelement,i)=>{
     encabezado_elements[i] = createElement('h1',XMLelement.getContent());
-    encabezado_elements[i].parent("text_container");
+    encabezado_elements[i].parent("#text_subcontainer");
   });
   cuerpo.map((XMLelement,i)=>{
     cuerpo_elements[i] = createP(XMLelement.getContent());
-    cuerpo_elements[i].parent("text_container");
+    cuerpo_elements[i].parent("text_subcontainer");
   });
   leyenda.map((XMLelement,i)=>{
     leyenda_elements[i] = createElement("h2",XMLelement.getContent());
-    leyenda_elements[i].parent("text_container");
+    leyenda_elements[i].parent("text_subcontainer");
   });
 }
 
-function anotateHTMLelements() {
+function highlightHTMLelements() {
   encabezado.map((XMLelement,i)=>{
     updateCurrent(encabezado_elements[i], XMLelement)
   });
@@ -185,12 +134,144 @@ function updateCurrent(html_e, xml_e) {
   })
 }
 
+function showLabelingUI() {
+  select("#labels_position").show();
+  if (select("#labels_container")) {select("#labels_container").remove()}
+  createDiv("").id("labels_container").show().parent("#labels_position");
+  createP("Selecciona la etiqueta:").parent("#labels_container");
+  setOptions();
+  setLabelButton();
+  setAttributeCheckbox();
+  setConventions();
+  setAdditionalLabels();
+}
+
+function setOptions() {
+  select_label = createSelect().id("select_label");
+  select_label.parent("labels_container");
+  for (const e of label_list) {
+    select_label.option(e);
+  }
+}
+
+function setLabelButton() {
+  let labelBtn = createButton("Etiquetar").id("label_btn");
+  labelBtn.parent("labels_container");
+  labelBtn.mouseReleased(()=>{
+    current.range = window.getSelection().getRangeAt(0);
+    if (current.selection) {
+      if (current.selection.toString().length < 1) {
+        alert("Selecciona la parte del texto que quieres etiquetar");
+      } else {
+        if (attrCheckbox.checked()==true) {
+          showAttributeUI();
+        } else {
+          addLabel();
+        }
+      }
+    } else {
+      alert("Selecciona la parte del texto que quieres etiquetar");
+    }
+  }); 
+}
+
+function showAttributeUI() {
+  select("#attributes_position").show();
+  if (select("#attributes_container")) {select("#attributes_container").remove()}
+  createDiv("").id("attributes_container").show().parent("#attributes_position");
+  createP("Define los atributos:").parent("#attributes_container");
+
+  createDiv("").id("attributes_subcontainer").parent("#attributes_container");
+  createKeyValueInput();
+
+  let moreBtn = createButton("Más atributos").parent("#attributes_container");
+  moreBtn.mouseReleased(()=>{
+    createKeyValueInput();
+  });
+  let acceptBtn = createButton("Etiquetar").parent("#attributes_container");
+  acceptBtn.mouseReleased(()=>{
+    current.attrkeys = selectAll(".attr_keys").map(d=>d.value());
+    current.attrvalues = selectAll(".attr_values").map(d=>d.value());
+    select("#attributes_position").hide();
+    select("#attributes_container").remove();
+    addLabel();
+  });
+  let cancelBtn = createButton("Cancelar").parent("#attributes_container");
+  cancelBtn.mouseReleased(()=>{
+    select("#attributes_position").hide();
+    select("#attributes_container").remove();
+  });
+}
+
+function createKeyValueInput() {
+  createInput("Clave").class("attr_keys").parent("attributes_subcontainer");
+  createInput("Valor").class("attr_values").parent("attributes_subcontainer");
+}
+
+function setAttributeCheckbox() {
+  attrCheckbox = createCheckbox("¿Incluir atributos?", attrSelection).id("attr_checkbox");
+  attrCheckbox.parent("labels_container");
+}
+
 function addLabel() {
   current.label = select_label.value();
   let label = document.createElementNS("http://www.tei-c.org/ns/1.0", current.label);
-  current.selection.getRangeAt(0).surroundContents(label);
+  setLabelAttributes(label);
+  current.range.surroundContents(label);
   current.xml.setContent(current.html.html());
+  current.selection = null;
+  current.range = null;
 }
+
+function setLabelAttributes(label) {
+  for (let i = 0; i < current.attrkeys.length; i++) {
+    label.setAttribute(current.attrkeys[i],current.attrvalues[i]);
+  }
+  current.attrkeys = [];
+  current.attrvalues = [];
+}
+
+function setConventions() {
+  let conv = createDiv("")
+  conv.id("conventions").parent("labels_container");
+  createP("Convenciones:").parent("conventions");
+  let styling = "";
+  for (let e in label_list) {
+    createP(label_list[e])
+    .parent("conventions")
+    .style("background", color_list[e])
+    .class("conventions_p")
+
+    styling+=`
+    ${label_list[e]} {
+      background: ${color_list[e]};
+    }
+    `
+  }
+  if (select("#label_styling")) {select("#label_styling").remove()}
+  createElement("style", styling).id("label_styling");
+}
+
+function setAdditionalLabels() {
+  let inp = createInput("Nueva etiqueta")
+  inp.id("new_label")
+  .parent("labels_container")
+
+  createButton("Agregar")
+  .id("new_label_btn")
+  .parent("labels_container")
+  .mouseReleased(()=>{
+    if (!label_list.includes(inp.value())) {
+      label_list.push(inp.value());
+      color_list.push(randomHexColor());
+      showLabelingUI();
+    } else {
+      alert("La etiqueta ya existe");
+    }
+  });
+}
+
+// Helpers --------------- *
 
 function randomHexColor() {
   let rgb = [];
