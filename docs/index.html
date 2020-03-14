@@ -4,23 +4,94 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <title>Anotador Tei</title>
+    <link href="https://fonts.googleapis.com/css?family=Domine&display=swap" rel="stylesheet">
     <script src="p5.min.js"></script>
     <style>
       body {
-        padding: 0;
-        margin: 0;
+        --dcolor: black;
+        --lcolor: #ffe799;
+        --btncolor: #59baff;
+        --brad: 5px;
+        --font: 'Domine', serif;
+        /* background: var(--dcolor); */
+        font-family: var(--font);
+      }
+
+      button {
+        font-size: 14px;
+        background: var(--btncolor);
+        border: none;
+        border-radius: var(--brad);
+        font-family: var(--font);
+        margin: 0px 2px;
+      }
+
+      button:hover {
+        background: var(--dcolor);
+        color: var(--btncolor);
+      }
+
+      button:active {
+        color: white;
+      }
+
+      button:focus {
+        outline:none;
+      }
+
+      select {
+        font-family: var(--font);
+        font-size:14px;
+        color:#111111;
+        background:white;
+        border-radius:0px;
+        box-shadow:none;
+        border:solid 1px;
+        margin:5px 0px;
+      }
+
+      input {
+        font-family: var(--font);
+        font-size: 14px;
+        background: white;
+        border: solid 1px var(--dcolor);
+        border-radius: var(--brad);
+      }
+
+      #xml_file {
+        display:none;
+      }
+
+      #loadXML_label {
+        font-size: 14px;
+        background: var(--btncolor);
+        border: none;;
+        border-radius: var(--brad);
+        font-family: var(--font);
+        padding: 2px 5px;
+      }
+
+      #loadXML_label:hover {
+        background: var(--dcolor);
+        color: var(--btncolor);
+      }
+
+      #loadXML_label:active {
+        color: white;
       }
 
       #labels_container {
-        box-sizing: border-box;
-        background: white;
+        transition: 1s ease;
         display: none;
+        box-sizing: border-box;
+        border: solid 1px var(--dcolor);
+        border-radius: var(--brad);
+        background: white;
         width: 250px;
         max-height: 500px;
-        border: solid 1px black;
         position: fixed;
-        top: 10px;
-        left: 5px;
+        top: 8px;
+        left: 20px;
         padding: 10px;
         overflow: scroll;
       }
@@ -30,15 +101,16 @@
       }
 
       #attributes_container {
-        box-sizing: border-box;
-        background: white;
         display: none;
+        box-sizing: border-box;
+        border: solid 1px var(--dcolor);
+        border-radius: var(--brad);
+        background: white;
         width: 400px;
         max-height: 300px;
-        border: solid 1px black;
         position: fixed;
-        top: 50px;
-        left: 50px;
+        top: 60px;
+        left: 60px;
         padding: 10px;
         overflow: scroll;
       }
@@ -50,37 +122,67 @@
         padding: 0px 0px 20px 0px;
       }
 
-      #title {
+      #app_container {
         box-sizing: border-box;
+        background: white;
+        border: solid 1px var(--dcolor);
+        border-radius: var(--brad);
         margin: auto;
         width: 700px;
-        border: solid 1px black;
+      }
+
+      #title {
+        box-sizing: border-box;
+        /* border: solid 1px black; */
         text-align: center;
       }
 
       h1 {
-        font-size: 20px;
+        font-family: var(--font);
+        color: var(--dcolor);
+        font-size: 25px;
       }
 
       #load_ui_container {
         box-sizing: border-box;
-        margin: auto;
-        width: 700px;
-        border: solid 1px black;
-        padding: 10px;
+        background: var(--lcolor);
+        border-radius: var(--brad);
+        /* border: solid 1px black; */
+        padding: 20px;
       }
 
       #anotator_container {
         display: none;
         box-sizing: border-box;
-        margin: auto;
-        width: 700px;
-        border: solid 1px black;
+        padding: 0px;
+      }
+
+      #text_container {
+        padding: 20px;
+      }
+
+      #output_container {
         padding: 20px;
       }
       
       #button_container {
-        padding: 20px 0px;
+        background: var(--lcolor);
+        border-radius: var(--brad);
+        padding: 0px 0px;
+        text-align:center;
+      }
+
+      #new_label {
+        width: 50%;
+      }
+
+      #save_btn {
+        font-size: 20px;
+      }
+
+      #loadXML_span {
+        font-size: 12px;
+        padding: 0px 10px;
       }
 
       .conventions_p {
@@ -95,14 +197,14 @@
       footer {
         margin: auto;
         text-align: center;
-        font-size: 11px;
+      }
+
+      footer p {
+        font-size: 10px;
       }
     </style>
   </head>
   <body>
-    <div id="title">
-      <h1>Anotador TEI</h1>
-    </div>
     <div id="labels_position">
       <div id="labels_container">
       </div>
@@ -111,13 +213,18 @@
       <div id="attributes_container">
       </div>
     </div>
-    <div id="load_ui_container">
-      <p>Carga un archivo XML preformateado en el esquema TEI:</p>
-    </div>
-    <div id="anotator_container">
-      <div id=text_container></div>
-      <div id=button_container></div>
-      <div id=output_container></div>
+    <div id="app_container">
+      <div id="title">
+        <h1>Anotador TEI</h1>
+      </div>
+      <div id="load_ui_container">
+        <p>Carga un archivo XML preformateado en el esquema TEI:</p>
+      </div>
+      <div id="anotator_container">
+        <div id=text_container></div>
+        <div id=button_container></div>
+        <div id=output_container></div>
+      </div>
     </div>
     <footer>
       <p>Por Sergio Rodríguez Gómez — <span id="date"></span> — V. 0.2 — MIT LICENSE: Este software se puede copiar, modificar y distribuir libremente</p>

@@ -4,8 +4,8 @@
 // MIT LICENSE
 // Este código se puede copiar, modificar y distribuir libremente
 
-let url = 'test.xml';
-let xml;
+let url; // Guarda la url del archivo subido por el usuario
+let xml; // Guarda el objeto XML sobre el que se harán modificaciones
 let current = {
   label: "persName", // El label inicial del DOM select
   selection: null, // La selección de texto actual
@@ -47,11 +47,25 @@ function setup() {
 
 function loadXMLui() {
   // Muestra la interfaz inicial de carga de archivos
+  createElement("label")
+    .id("loadXML_label")
+    .html("Seleccionar el archivo")
+    .attribute("for", "xml_file")
+    .parent("load_ui_container")
+
+  createSpan("...No has seleccionado ningún archivo")
+    .id("loadXML_span")
+    .parent("load_ui_container")
+
   let loadXML = createElement("input");
   loadXML.parent("load_ui_container");
   loadXML.id("xml_file");
   loadXML.attribute("type", "file");
   loadXML.attribute("accept", "text/xml");
+  loadXML.changed(()=>{
+    select("#loadXML_span").html(document.getElementById('xml_file').files[0].name);
+  })
+
   let loadXML_Btn = createButton("Cargar");
   loadXML_Btn.parent("#load_ui_container");
   loadXML_Btn.mouseReleased(()=>{
@@ -71,6 +85,7 @@ function defineXML() {
 }
 
 function loadUI(xml_input) {
+  // Muestra la interfaz de anotación
   select("#anotator_container").show();
   xml = xml_input;
   let divs = xml.getChild("text").getChild("body").getChildren();
@@ -204,8 +219,8 @@ function showAttributeUI() {
 }
 
 function createKeyValueInput() {
-  createInput("Clave").class("attr_keys").parent("attributes_subcontainer");
-  createInput("Valor").class("attr_values").parent("attributes_subcontainer");
+  createInput("Clave").style("border-radius", "0px").class("attr_keys").parent("attributes_subcontainer");
+  createInput("Valor").style("border-radius", "0px").class("attr_values").parent("attributes_subcontainer");
 }
 
 function setAttributeCheckbox() {
@@ -243,7 +258,7 @@ function setConventions() {
     .class("conventions_p")
 
     styling+=`
-    ${label_list[e]} {
+    #text_container ${label_list[e]} {
       background: ${color_list[e]};
     }
     `
@@ -255,6 +270,7 @@ function setConventions() {
 function setAdditionalLabels() {
   let inp = createInput("Nueva etiqueta")
   inp.id("new_label")
+  .style("border-radius", "0px")
   .parent("labels_container")
 
   createButton("Agregar")
