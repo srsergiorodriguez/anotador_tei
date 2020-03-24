@@ -1,5 +1,5 @@
 // Interfaz de anotación TEI
-// Versión 0.1
+// Versión 1.0
 // Por Sergio Rodríguez Gómez
 // MIT LICENSE
 // Este código se puede copiar, modificar y distribuir libremente
@@ -17,23 +17,16 @@ let current = {
 let attrCheckbox; // Checkbox para definir si se añaden atributos
 let attrSelection = false; // ¿Se añaden atributos?
 
-let encabezado; // Contiene el valor del div de tipo encabezado
-let cuerpo; // Contiene el valor del div de tipo cuerpo
-let leyenda; // Contiene el valor del div de tipo leyenda
-let encabezado_elements = []; // Contiene los elementos child del div encabezado
-let cuerpo_elements = []; // Contiene los elementos child del div cuerpo
-let leyenda_elements = []; // Contiene los elementos child del div leyenda
-
 // Una lista de labels por defecto
 // TODO: poner aquí los labels TEI más comunes
 // TODO2: incluir la opción de agregar sub esquemas TEI
-let label_list = ["persName", "placeName", "orgName", "q", "label"];
+let label_list = ["div","p","persName","placeName","orgName","q","label"];
 
 // Una lista de colores por defecto
 // Si se añaden nuevas etiquetas, se añaden colores aleatorios a esta lista
-let color_list = ["#99ff66", "#bf80ff", "#ff6699", "#3399ff", "#ffcc00", "#ffff66", "#669999"];
+let color_list = ["#e8f3ff","#e8fff0","#99ff66","#bf80ff","#ff6699","#3399ff","#ffcc00","#ffff66","#a1f0f0"];
 
-// El elemento select que contiene los lables de label_list
+// El elemento select que contiene los labels de label_list
 let select_label;
 
 // Un elemento textarea en el que se muestra el XML codificado final
@@ -50,7 +43,7 @@ function loadXMLui() {
   createElement("label")
     .id("loadXML_label")
     .html("Seleccionar el archivo")
-    .attribute("for", "xml_file")
+    .attribute("for","xml_file")
     .parent("load_ui_container")
 
   createSpan("...No has seleccionado ningún archivo")
@@ -88,63 +81,22 @@ function loadUI(xml_input) {
   // Muestra la interfaz de anotación
   select("#anotator_container").show();
   xml = xml_input;
-  let divs = xml.getChild("text").getChild("body").getChildren();
-  getXMLelements(divs);
+  console.log(xml);
+  current.text = xml.getChild("text").DOM.innerHTML;
   createHTMLelements();
   highlightHTMLelements();
-
   showLabelingUI();
-  if (select("#save_btn")) {select("#save_btn").remove()}
-  let saveBtn = createButton("Exportar anotación").id("save_btn");
-  saveBtn.parent("button_container");
-  saveBtn.mouseReleased(()=>{
-    output.html(xml.serialize());
-  });
-
-  if (select("#output_export")) {select("#output_export").remove()}
-  output = createElement("textarea", "").id("output_export");
-  output.parent("output_container");
-}
-
-function getXMLelements(divs) {
-  encabezado = divs[0].getChildren();
-  cuerpo = divs[1].getChildren();
-  leyenda = divs[2].getChildren();
+  showExportUI();
 }
 
 function createHTMLelements() {
   if (select("#text_subcontainer")) {select("#text_subcontainer").remove()}
   createDiv("").id("text_subcontainer").parent("text_container");
-  encabezado.map((XMLelement,i)=>{
-    encabezado_elements[i] = createElement('h1',XMLelement.getContent());
-    encabezado_elements[i].parent("#text_subcontainer");
-  });
-  cuerpo.map((XMLelement,i)=>{
-    cuerpo_elements[i] = createP(XMLelement.getContent());
-    cuerpo_elements[i].parent("text_subcontainer");
-  });
-  leyenda.map((XMLelement,i)=>{
-    leyenda_elements[i] = createElement("h2",XMLelement.getContent());
-    leyenda_elements[i].parent("text_subcontainer");
-  });
+  current.textdiv = createDiv(current.text).parent("#text_subcontainer");
 }
 
 function highlightHTMLelements() {
-  encabezado.map((XMLelement,i)=>{
-    updateCurrent(encabezado_elements[i], XMLelement)
-  });
-  cuerpo.map((XMLelement,i)=>{
-    updateCurrent(cuerpo_elements[i], XMLelement)
-  });
-  leyenda.map((XMLelement,i)=>{
-    updateCurrent(leyenda_elements[i], XMLelement)
-  });
-}
-
-function updateCurrent(html_e, xml_e) {
-  html_e.mouseReleased(()=>{
-    current.xml = xml_e;
-    current.html = html_e;
+  current.textdiv.mouseReleased(()=>{
     current.selection = window.getSelection();
   })
 }
@@ -159,6 +111,19 @@ function showLabelingUI() {
   setAttributeCheckbox();
   setConventions();
   setAdditionalLabels();
+}
+
+function showExportUI() {
+  if (select("#save_btn")) {select("#save_btn").remove()}
+  let saveBtn = createButton("Exportar anotación").id("save_btn");
+  saveBtn.parent("button_container");
+  saveBtn.mouseReleased(()=>{
+    output.html(xml.serialize());
+  });
+
+  if (select("#output_export")) {select("#output_export").remove()}
+  output = createElement("textarea", "").id("output_export");
+  output.parent("output_container");
 }
 
 function setOptions() {
@@ -230,10 +195,10 @@ function setAttributeCheckbox() {
 
 function addLabel() {
   current.label = select_label.value();
-  let label = document.createElementNS("http://www.tei-c.org/ns/1.0", current.label);
-  setLabelAttributes(label);
+  let label = document.createElementNS("http://www.tei-c.org/ns/1.0",current.label);
   current.range.surroundContents(label);
-  current.xml.setContent(current.html.html());
+  setLabelAttributes(label);
+  xml.getChild("text").DOM.innerHTML = current.textdiv.html();
   current.selection = null;
   current.range = null;
 }

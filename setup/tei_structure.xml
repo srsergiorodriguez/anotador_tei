@@ -1,0 +1,130 @@
+<TEI>
+	<teiHeader>
+		<title></title>
+		<sourceDesc>
+			<p></p>
+		</sourceDesc>
+	</teiHeader>
+	<text>
+		<body>
+			<p></p>
+		</body>
+	</text>
+</TEI>
+
+-tags for textual elements: titles, paragraphs, headings, dedications, notes
+
+-non-textual elements: graphics, illustrations, covers, binding
+
+-meta-data: dates, prices, page counts, history
+
+MODULES: drama, analysis, verse, spoken, namesdates
+
+TEI CORE (MODULE):
+
+-Id info: shelfmark, inventory number, page num, titles
+-Divisions: pictures, diagrams, graphical info
+-Writing modes: prose, verse, drama
+-Forma structural units: paragraphs, lists, stanzas, lines, speeches
+-Textual distinctions: titles: headings, quotes, names
+-Metatextual interventions: deletions, additions, annotations, revisions
+
+<div> miltipurpose division </div>
+
+<p> Paragraph </p>
+<l> Verse line </l>
+<hi> highlights </hi>
+<foreign></foreign>
+<emphasis></emphasis>
+
+<q>quotation <q>
+<said>passages thought or spoken </said>
+<quote>passages attributed to external source </quote>
+<cit> passages attributed to external source with bibliographic info </cit>
+
+<bibl></bibl>
+<bivlStruct>
+	<title></title>
+	<author></author>
+	<editor></editor>
+	<date></date>
+	<publisher></publisher>
+	<pubPlace></pubPlace>
+</bivlStruct>
+
+<choice>
+	alternative editorial changes
+	<abbr>Mr.</abbr>
+	<expan>Mister</expan>
+
+	<sic>error in text</sic>
+	<corr>correction</corr>
+
+	<original>original form</original>
+	<reg>regularized form</reg>
+</choice>
+
+<del rend="strikethroug"></del>
+<add></add>
+<unclear></unclear>
+<gap></gap>
+
+@type @subtype attributes
+<name>
+	<persName></persName>
+	<placeName></placeName>
+	<orgName></orgName>
+</name>
+<rs> referencing string </rs>
+
+<address></address>
+<email></email>
+<addrLine></addrLine>
+<street></street>
+<postCode></postCode>
+<postBox></postBox>
+
+@when --04-02 YYYY-MM-DD
+<date></date>
+@when HH:MM:SS
+<time></time>
+
+@tupe @value
+<num></num>
+@type, @unit @quantity @commodity
+<measure></measure>
+<measureGrp> groups measueres of the same object</measureGrp>
+
+@target URI
+<ptr>pointer to another location</ptr> ptr contains no text
+<ref>reference to another location</ref>
+
+@rend how the list should appear
+<list>
+	<item></item>
+	<label></label>
+	<head></head>
+	<headLabel>heading for a column of labels</headLabel>
+	<headItem>heading for a column of items</headItem>
+</list>
+
+@URL
+<graphic></graphic>
+<media></media>
+<figure></figure>
+<binaryObject></binaryObject>
+
+
+Drama: 
+who attr
+<sp>
+ speech 
+ <speaker> speaker </speaker>
+ <stage> stage </stage>
+ <p></p>
+</sp>
+
+
+
+
+
