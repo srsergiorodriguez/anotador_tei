@@ -4,6 +4,14 @@
 // MIT LICENSE
 // Este código se puede copiar, modificar y distribuir libremente
 
+/* Descripción: este es el código de una interfaz que sirve para anotar 
+textos con el esquema TEI (Text Encoding Initiative). 
+Básicamente, la interfaz muestra el contenido de un documento preformateado en TEI
+y permite añadir etiquetas y attributos a partes del documento seleccionadas.
+El contenido etiquetado se resalta con varios colores para que sea fácil de seguir.
+El documento con las nuevas anotaciones puede luego exportarse.
+*/
+
 let url; // Guarda la url del archivo subido por el usuario
 let xml; // Guarda el objeto XML sobre el que se harán modificaciones
 let current = {
@@ -40,16 +48,20 @@ function setup() {
 
 function loadXMLui() {
   // Muestra la interfaz inicial de carga de archivos
+
+  // El botón que se presiona para abrir el explorador de carga
   createElement("label")
     .id("loadXML_label")
     .html("Seleccionar el archivo")
     .attribute("for","xml_file")
     .parent("load_ui_container")
 
+  // Span que muestra el nombre del archivo o la advertencia de que no se ha seleccionado ningún archivo
   createSpan("...No has seleccionado ningún archivo")
     .id("loadXML_span")
     .parent("load_ui_container")
 
+  // El input del archivo, permanece oculto y es remplazado por el botón "label"
   let loadXML = createElement("input");
   loadXML.parent("load_ui_container");
   loadXML.id("xml_file");
@@ -59,6 +71,7 @@ function loadXMLui() {
     select("#loadXML_span").html(document.getElementById('xml_file').files[0].name);
   })
 
+  // El botón para confirmar la carga del archivo
   let loadXML_Btn = createButton("Cargar");
   loadXML_Btn.parent("#load_ui_container");
   loadXML_Btn.mouseReleased(()=>{
@@ -68,6 +81,7 @@ function loadXMLui() {
       url = window.URL.createObjectURL(file);
       defineXML();
     } else {
+      // Una advertencia en caso de que se presione el botón sin cargar nada
       alert("Carga un archivo XML primero");
     }
   })
