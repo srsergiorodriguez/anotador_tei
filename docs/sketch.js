@@ -4,12 +4,20 @@
 // MIT LICENSE
 // Este código se puede copiar, modificar y distribuir libremente
 
-/* Descripción: este es el código de una interfaz que sirve para anotar 
+/*
+Descripción: este es el código de una interfaz que sirve para anotar 
 textos con el esquema TEI (Text Encoding Initiative). 
 Básicamente, la interfaz muestra el contenido de un documento preformateado en TEI
 y permite añadir etiquetas y attributos a partes del documento seleccionadas.
 El contenido etiquetado se resalta con varios colores para que sea fácil de seguir.
 El documento con las nuevas anotaciones puede luego exportarse.
+*/
+
+/* TODOS:
+  -poner una lista de los labels TEI más comunes
+  -incluir la opción de agregar sub esquemas TEI para distintos tipos de textos
+  -incluor una interfaz que permita crear in TEI XML desde cero con especificaciones mínimas
+  -arreglar los colores al azar para que no salgan colores oscuros
 */
 
 let url; // Guarda la url del archivo subido por el usuario
@@ -19,15 +27,14 @@ let current = {
   selection: null, // La selección de texto actual
   range: null, // El rango de texto actual (se actualiza con el botón etiquetar)
   attrkeys: [], // Las claves de los atributos actuales
-  attrvalues: [] // Los valores de los atributos actuales
+  attrvalues: [], // Los valores de los atributos actuales
+  text: null,
+  textdiv: null
 }
 
 let attrCheckbox; // Checkbox para definir si se añaden atributos
 let attrSelection = false; // ¿Se añaden atributos?
 
-// Una lista de labels por defecto
-// TODO: poner aquí los labels TEI más comunes
-// TODO2: incluir la opción de agregar sub esquemas TEI
 let label_list = ["div","p","persName","placeName","orgName","q","label"];
 
 // Una lista de colores por defecto
@@ -266,8 +273,7 @@ function setAdditionalLabels() {
   });
 }
 
-// Helpers --------------- *
-
+/* Funciones de ayuda --------------- */
 function randomHexColor() {
   let rgb = [];
   for (let i = 0; i < 3; i++) {
