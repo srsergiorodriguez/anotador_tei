@@ -1,0 +1,418 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+  schematypens="http://purl.oclc.org/dsdl/schematron"?>
+
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Carta de Jamaica</title>
+        <author>Simón Bolívar</author>
+        <respStmt>
+          <name>Nicolás Vaughan</name>
+          <resp>conversión a TEI</resp>
+        </respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <publisher>Universidad de los Andes</publisher>
+        <pubPlace>Bogotá, Colombia</pubPlace>
+        <date when="2020-09">septiembre de 2020</date>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl>
+          <ref type="url">
+            https://books.openedition.org/oep/691
+          </ref>
+        </bibl>
+      </sourceDesc>
+    </fileDesc>
+  </teiHeader>
+  <text xml:lang="es">
+    <body>
+      
+      <opener>
+        <pb n="1"/>
+        <salute>Muy Señor Mío:</salute>
+      </opener>
+      
+      
+      
+      <p>
+        Me apresuro a    
+        contestar la carta de <date when="1815-08-29">29 del mes pasado</date> que <choice><abbr>V.</abbr><expan>usted</expan></choice> me hizo el honor de dirigirme, y yo recibí con la mayor satisfacción.
+      </p>
+      
+      
+      
+      <p>
+        Sensible, como debo, al interés que <choice><abbr>V.</abbr><expan>usted</expan></choice> ha querido tomar por la suerte de mi patria, afligiéndose con ella por los tormentos que padece desde su descubrimiento hasta estos últimos períodos, por parte de sus destructores los españoles, no siento menos el comprometimiento en que me ponen las solícitas demandas que <choice><abbr>V.</abbr><expan>usted</expan></choice> me hace, sobre los objetos más importantes de la política americana. Así, me encuentro en un conflicto, entre el deseo de corresponder a la confianza con que <choice><abbr>V.</abbr><expan>usted</expan></choice> me favorece, y el impedimento de satisfacerla, tanto por la falta de documentos y de libros, cuanto por los limitados conocimientos que poseo de un país tan inmenso, variado y desconocido como el <placeName ref="#America">Nuevo Mundo</placeName>.
+      </p>
+      
+      
+      
+      <p>
+        En mi opinión es imposible responder a las preguntas <pb n="2"/> con que <choice><abbr>V.</abbr><expan>usted</expan></choice> me ha honrado. El mismo barón de Humboldt, con su universalidad de conocimientos teóricos y prácticos, apenas lo haría con exactitud, porque aunque una parte de la estadística y revolución de <placeName>América</placeName> es conocida, me atrevo a asegurar que la mayor está cubierta de tinieblas, y por consecuencia, sólo se pueden ofrecer conjeturas más o menos aproximadas, sobre todo en lo relativo a la suerte futura, y a los verdaderos proyectos de los americanos; pues cuantas combinaciones suministra la historia de las naciones, de otras tantas es susceptible la nuestra por sus posiciones físicas, por las vicisitudes de la guerra, y por los cálculos de la política.
+      </p>
+      
+      
+      
+      <p>
+        Como me conceptúo obligado a prestar atención a la apreciable carta de <choice><abbr>V.</abbr><expan>usted</expan></choice>, no menos que a sus filantrópicas miras, me animo a dirigir estas líneas, en las cuales ciertamente no hallará <choice><abbr>V.</abbr><expan>usted</expan></choice> las ideas luminosas que desea, mas sí las ingenuas expresiones de mis pensamientos.
+      </p>
+      
+      
+      
+      <p>
+        <q>Tres siglos ha, dice <choice><abbr>V.</abbr><expan>usted</expan></choice>, que empezaron las barbaridades que los españoles cometieron en el grande hemisferio de <name>Colón</name>.</q> Barbaridades que la presente edad ha rechazado como fabulosas, porque parecen superiores a la perversidad humana; y jamás serían creídas por los críticos modernos, si constantes y repetidos documentos no testificasen estas infaustas verdades. El filantrópico obispo de <placeName>Chiapa</placeName>, el apóstol de la <placeName>América</placeName>, <name>Las Casas</name> ha dejado a la posteridad una breve relación de ellas, extractada de las sumarias que siguieron en <placeName>Sevilla</placeName> a los conquistadores, con <pb n="3"/> el testimonio de cuantas personas respetables había entonces en el <placeName ref="#America">Nuevo Mundo</placeName>, y con los procesos mismos que los tiranos se hicieron entre sí; como consta por los más sublimes historiadores de aquel tiempo. Todos los imparciales han hecho justicia al celo, verdad y virtudes de aquel amigo de la humanidad, que con tanto fervor y firmeza denunció ante su gobierno y contemporáneos los actos más horrorosos de un frenesí sanguinario.
+      </p>
+      
+      
+      
+      <p>
+        ¡Con cuánta emoción de gratitud leo el pasaje de la carta de <choice><abbr>V.</abbr><expan>usted</expan></choice> en que me dice <q>!qué espera que los sucesos que siguieron entonces a las armas españolas, acompañen ahora a las de sus contrarios, los muy oprimidos americanos meridionales</q>! Yo tomo esta esperanza por una predicción, si la justicia decide las contiendas de los hombres. El suceso coronará nuestros esfuerzos; porque el destino de la <placeName>América</placeName> se ha fijado irrevocablemente; el lazo que la unía a la <placeName>España</placeName> está cortado; la opinión era toda su fuerza; por ella se estrechaban mutuamente las partes de aquella inmensa monarquía; lo que antes las enlazaba ya las divide; más grande es el odio que nos ha inspirado la Península que el mar que nos separa de ella; menos difícil es unir los dos continentes, que reconciliar los espíritus de ambos países. El hábito a la obediencia; un comercio de intereses, de luces, de religión; una recíproca benevolencia; una tierna solicitud por la cuna y la gloria de nuestros padres; en fin, todo lo que formaba nuestra esperanza nos venía de <placeName>España</placeName>. De aquí nacía un principio de adhesión que parecía <pb n="4"/> eterno; no obstante que la inconducta de nuestros dominadores relajaba esta simpatía; o por mejor decir este apego forzado por el imperio de la dominación. Al presente sucede lo contrario; la muerte, el deshonor, cuanto es nocivo, nos amenaza y tememos; todo lo sufrimos de esa desnaturalizada madrastra. El velo se ha rasgado; ya hemos visto la luz y se nos quiere volver a las tinieblas; se han roto las cadenas; ya hemos sido libres, y nuestros enemigos pretenden de nuevo esclavizarnos. Por lo tanto, la <placeName>América</placeName> combate con despecho; y rara vez la desesperación no ha arrastrado tras sí la victoria.
+      </p>
+      
+      
+      
+      <p>
+        Porque los sucesos hayan sido parciales y alternados, no debemos desconfiar de la fortuna. En unas partes triunfan los independientes, mientras que los tiranos en lugares diferentes, obtienen sus ventajas, y ¿cuál es el resultado final? ¿no está el <placeName ref="#America">Nuevo Mundo</placeName> entero, conmovido y armado para su defensa? Echemos una ojeada y observaremos una lucha simultánea en la misma extensión de este hemisferio.
+      </p>
+      
+      
+      
+      <p>
+        El Belicoso Estado de las Provincias del <placeName>Río de la Plata</placeName> ha purgado su territorio y conducido sus armas vencedoras al Alto <placeName>Perú</placeName> conmoviendo a <placeName>Arequipa</placeName>, e inquietado a los realistas de <placeName>Lima</placeName> cerca de <num value="1000000">un millón</num> de habitantes disfruta allí de su libertad.
+      </p>
+      
+      
+      
+      <p>
+        El Reino de <placeName>Chile</placeName>, poblado de <num value="800000">800.000</num> almas, está lidiando contra sus enemigos <pb n="5"/> que pretenden dominarlo; pero en vano, porque los que antes pusieron un término a sus conquistas, los indómitos y libres araucanos, son sus vecinos y compatriotas; y su ejemplo sublime es suficiente para probarles que el pueblo que ama su independencia, por fin lo logra.
+      </p>
+      
+      
+      
+      <p>
+        El Virreinato del <placeName>Perú</placeName>, cuya población asciende a <num value="1500000">millón y medio</num> de habitantes, es sin duda el más sumiso y al que más sacrificios se le han arrancado para la causa del rey; y bien que sean varias las relaciones concernientes a aquella porción de <placeName>América</placeName>, es indubitable que ni está tranquila, ni es capaz de oponerse al torrente que amenaza a las más de sus provincias.
+      </p>
+      
+      
+      
+      <p>
+        La <placeName>Nueva Granada</placeName>, que es, por decirlo así, el corazón de la <placeName>América</placeName>, obedece a un gobierno general, exceptuando el reino de <placeName>Quito</placeName> que con la mayor dificultad contienen sus enemigos, por ser fuertemente adicto a la causa de su patria, y las provincias de <placeName>Panamá</placeName> y <placeName>Santa Marta</placeName> que sufren, no sin dolor, la tiranía de sus señores. Dos millones y medio de habitantes están esparcidos en aquel territorio que actualmente defienden contra el ejército español bajo el general <name>Morillo</name>, que es verosímil sucumba delante de la inexpugnable plaza de <placeName>Cartagena</placeName>. Mas si la tomare será a costa de grandes pérdidas, y desde luego carecerá de fuerzas bastantes para subyugar a los morigeres y bravos moradores del interior.
+      </p>
+      
+      
+      
+      <p>
+        En cuanto a la heroica y desdichada <placeName>Venezuela</placeName>, sus acontecimientos han sido tan rápidos y sus devastaciones tales, que casi la han reducido a una absoluta indigencia y a una soledad espantosa, no obstante que era uno de los más bellos países de cuantos hacían el orgullo de la <placeName>América</placeName>. Sus tiranos gobiernan <pb n="6"/> un desierto, y sólo oprimen a tristes restos que, escapados de la muerte, alimentan una precaria existencia: algunas mujeres, niños y ancianos son los que quedan. Los más de los hombres han perecido por no ser esclavos, y los que viven combaten con furor en los campos y en los pueblos internos hasta expirar o arrojar al mar a los que, insaciables de sangre y de crímenes, rivalizan con los primeros monstruos que hicieron desaparecer de la <placeName>América</placeName> a su raza primitiva. Cerca de <num value="1000000">un millón</num> de habitantes se contaba en <placeName>Venezuela</placeName>; y sin exageración se puede asegurar que una cuarta parte ha sido sacrificada por la tierra, la espada, el hambre, la peste, las peregrinaciones; excepto el terremoto, todos resultados de la guerra.
+      </p>
+      
+      
+      
+      <p>
+        En <placeName>Nueva <placeName>España</placeName></placeName> había en <date when="1800">1808</date>, según nos refiere el barón de Humboldt, <num value="7800000">7.800.000</num> almas con inclusión de <placeName><placeName>Guatemala</placeName></placeName>. Desde aquella época, la insurrección que ha agitado a casi todas sus provincias, ha hecho disminuir sensiblemente aquel cómputo que parece exacto; pues más de un millón de hombres han perecido, como lo podrá <choice><abbr>V.</abbr><expan>usted</expan></choice> ver en la exposición de <name>Mr. Walton</name> que describe con fidelidad los sanguinarios crímenes cometidos en aquel opulento imperio. Allí la lucha se mantiene a fuerza de sacrificios humanos y de todas especies, pues nada ahorran los españoles con tal que logren someter a los que han tenido la desgracia de nacer en este suelo, que parece destinado a empaparse con la sangre de sus hijos. A pesar de todo, los mexicanos serán libres, porque han abrazado <pb n="7"/> el partido de la patria, con la resolución de vengar a sus pasados, o seguirlos al sepulcro. Ya ellos dicen con <name>Raynal</name>: <q>llegó el tiempo, en fin, de pagar a los españoles suplicios con suplicios y de ahogar a esa raza de exterminadores en su sangre o en el mar</q>.
+      </p>
+      
+      
+      
+      <p>
+        Las islas de <placeName>Puerto Rico</placeName> y <placeName>Cuba</placeName>, que entre ambas pueden formar una población de <num value="700000">700</num> a <num value="800000">800.000</num> almas, son las que más tranquilamente poseen los españoles, porque están fuera del contacto de los independientes. Mas ¿no son americanos estos insulares? ¿No son vejados? ¿No desearán su bienestar?
+      </p>
+      
+      
+      
+      <p>
+        Este cuadro representa una escala militar de <num value="2000">2.000</num> <unit unit="legua">leguas</unit> de longitud y <num value="900">900</num> de latitud en su mayor extensión en que <num value="16000000">16.000.000</num> americanos defienden sus derechos, o están comprimidos por la nación española, que aunque fue en algún tiempo el más vasto imperio del mundo, sus restos son ahora impotentes para dominar el nuevo hemisferio, y hasta para mantenerse en el antiguo. ¿Y la <placeName>Europa</placeName> civilizada, comerciante y amante de la libertad, permite que una vieja serpiente, por sólo satisfacer su saña envenenada, devore la más bella parte de nuestro globo? ¡Qué! ¿está la <placeName>Europa</placeName> sorda al clamor de su propio interés? ¿No tiene ya ojos para ver la justicia? ¿Tanto se ha endurecido para ser de este modo insensible? Estas cuestiones, cuanto más las medito, más me confunden; llego a pensar que se aspira a que desaparezca la <placeName>América</placeName>; pero es imposible porque toda la <placeName>Europa</placeName> no es <placeName>España</placeName>. ¡Qué demencia la de nuestra enemiga, pretender reconquistar la <placeName>América</placeName>, sin marina, sin tesoros, y casi sin soldados! Pues los que tiene apenas son bastantes para retener a su propio pueblo en una violenta obediencia <pb n="8"/> y defenderse de sus vecinos. Por otra parte, ¿podrá esta nación hacer el comercio exclusivo de la mitad del mundo sin manufacturas, sin producciones territoriales, sin artes, sin ciencias, sin política? Lograda que fuese esta loca empresa, y suponiendo más, aun lograda la pacificación, los hijos de los actuales americanos unidos con los de los europeos reconquistadores, ¿no volverían a formar dentro de veinte años los mismos patrióticos designios que ahora se están combatiendo?
+      </p>
+      
+      
+      
+      <p>
+        La <placeName>Europa</placeName> haría un bien a la <placeName>España</placeName> en disuadirla de su obstinada temeridad, porque a lo menos le ahorrará los gastos que expende, y la sangre que derrama; a fin de que fijando su atención en sus propios recintos, fundase su prosperidad y poder sobre bases más sólidas que las de inciertas conquistas, un comercio precario y exacciones violentas en pueblos remotos, enemigos y poderosos. La <placeName>Europa</placeName> misma, por miras de sana política debería haber preparado y ejecutado el proyecto de la independencia americana, no sólo porque el equilibrio del mundo así lo exige, sino porque este es el medio legítimo y seguro de adquirirse establecimientos ultramarinos de comercio. La <placeName>Europa</placeName>, que no se halla agitada por las violentas pasiones de la venganza, ambición y codicia, como la <placeName>España</placeName>, parece que estaba autorizada por todas las leyes de la equidad a ilustrarla sobre sus bien entendidos intereses.
+      </p>
+      
+      
+      
+      <p>
+        Cuantos escritores han tratado la <pb n="9"/> materia se acordaban en esta parte. En consecuencia, nosotros esperábamos con razón que todas las naciones cultas se apresurarían a auxiliarnos, para que adquiriésemos un bien cuyas ventajas son recíprocas a entrambos hemisferios. Sin embargo ¡cuán frustradas esperanzas! No sólo los europeos, pero hasta nuestros hermanos del Norte, se han mantenido inmóviles espectadores de esta contienda, que por su esencia es la más justa, y por sus resultados la más bella e importante de cuantas se han suscitado en los siglos antiguos y modernos; porque ¿hasta dónde se puede calcular la trascendencia de la libertad del hemisferio de <name>Colón</name>?
+      </p>
+      
+      
+      
+      <p>
+        <q>La felonía con que <name>Bonaparte</name>, dice <choice><abbr>V.</abbr><expan>usted</expan></choice>, prendió a <name>Carlos IV</name> y a <name>Fernando VII</name> reyes de esta nación, que tres siglos ha, aprisionó con traición a dos monarcas de la <placeName>América Meridional</placeName>, es un acto muy manifiesto de la retribución divina, y al mismo tiempo una prueba de que Dios sostiene la justa causa de los americanos, y les concederá su independencia</q>.
+      </p>
+      
+      
+      
+      <p>
+        Parece que <choice><abbr>V.</abbr><expan>usted</expan></choice> quiere aludir al monarca de <placeName>México</placeName> <name>Moteuczoma</name>, preso por <name>Cortés</name> y muerto, según Herrera por el mismo, aunque Solís dice que por el pueblo; y a <name>Atahualpa</name>, Inca del <placeName>Perú</placeName>, destruido por <name>Francisco Pizarro</name> y <name>Diego <name>Almagro</name></name>. Existe tal diferencia entre la suerte de los reyes españoles y los reyes americanos, que no admiten comparación; los primeros son tratados con dignidad, conservados, y al fin recobran su libertad y trono; mientras que los últimos sufren tormentos inauditos y los vilipendios más vergonzosos. Si a <name>Quauhtemotzin</name> sucesor de <name>Moteuczoma</name>, se le trata como emperador, y le ponen la corona, fue por irrisión y no por respeto, para que experimentase este escarnio antes que las torturas. <pb n="10"/> Iguales a la suerte de este monarca fueron las del rey de Michoacán, <name>Catzontzin</name> el Zipa de Bogotá, y cuantos Toquis, Incas, Zipas, Ulmenes, Caciques y demás dignidades indianas sucumbieron al poder español. El suceso de <name>Fernando VII</name> es más semejante al que tuvo lugar en <placeName>Chile</placeName> en 1535 con el <name>Ulmén</name> de Copiapó, entonces reinante en aquella comarca. El español <name>Almagro</name> pretextó, como <name>Bonaparte</name>, tomar partido por la causa del legítimo soberano, y en consecuencia llama al usurpador como Fernando lo era en <placeName>España</placeName>; aparenta restituir al legítimo a sus estados y termina por encadenar y echar a las llamas al infeliz <name>Ulmén</name>, sin querer ni aun oír su defensa. Este es el ejemplo de <name>Fernando VII</name> con su usurpador; los reyes europeos sólo padecen destierros, el <name>Ulmén</name> de <placeName>Chile</placeName> termina su vida de un modo atroz.
+      </p>
+      
+      
+      
+      <p>
+        <q>Después de algunos meses, añade <choice><abbr>V.</abbr><expan>usted</expan></choice>, he hecho muchas reflexiones sobre la situación de los americanos y sus esperanzas futuras; tomo grande interés en sus sucesos; pero me faltan muchos informes relativo a su estado actual y a lo que ellos aspiran: deseo infinitamente saber la política de cada provincia como también su población; si desean repúblicas o monarquías, si formarán una gran república o una gran monarquía? Toda noticia de esta especie que <choice><abbr>V.</abbr><expan>usted</expan></choice> pueda darme, o indicarme las fuentes a que debo ocurrir, la estimaré como un favor muy particular</q>.
+      </p>
+      
+      
+      
+      <p>
+        Siempre las almas generosas se interesan en la suerte de un pueblo que se esmera por recobrar <pb n="11"/> los derechos con que el Criador y la naturaleza le han dotado; y es necesario estar bien fascinado por el error o por las pasiones para no abrigar esta noble sensación; <choice><abbr>V.</abbr><expan>usted</expan></choice> ha pensado en mi país, y se interesa por él; este acto de benevolencia me inspira el más vivo reconocimiento.
+      </p>
+      
+      
+      
+      <p>
+        He dicho la población que se calcula por datos más o menos exactos, que mil circunstancias hacen fallidos, sin que sea fácil remediar esta inexactitud, porque los más de los moradores tienen habitaciones campestres, y muchas veces errantes; siendo labradores, pastores, nómades, perdidos en medio de espesos e inmensos bosques, llanuras solitarias, y aislados entre lagos y ríos caudalosos. ¿Quién será capaz de formar una estadística completa de semejantes comarcas? Además, los tributos que pagan los indígenas; las penalidades de los esclavos; las primicias, diezmos y derechos que pesan sobre los labradores, y otros accidentes, alejan de sus hogares a los pobres americanos. Esto es sin hacer mención de la guerra de exterminio que ya ha segado cerca de un octavo de la población, y ha ahuyentado una gran parte; pues entonces las dificultades son insuperables y el empadronamiento vendrá a reducirse a la mitad del verdadero censo.
+      </p>
+      
+      
+      
+      <p>
+        Todavía es más difícil presentir la suerte futura del <placeName ref="#America">Nuevo Mundo</placeName>, establecer principios sobre su política, y casi profetizar la naturaleza del gobierno que llegará a adoptar. Toda idea relativa al porvenir de este país me parece aventurada. ¿Se pudo preveer, cuando el género humano se hallaba en su infancia rodeado de tanta incertidumbre, ignorancia y error, cuál sería el régimen que abrazaría <pb n="12"/> para su conservación? ¿Quién se habría atrevido a decir tal nación será república o monarquía, esta será pequeña, aquella grande? En mi concepto, esta es la imagen de nuestra situación.
+      </p>
+      
+      
+      
+      <p>
+        Nosotros somos un pequeño género humano; poseemos un mundo aparte, cercado por dilatados mares; nuevos en casi todas las artes y ciencias, aunque en cierto modo viejos en los usos de la sociedad civil. Yo considero el estado actual de la <placeName>América</placeName>, como cuando desplomado el imperio romano, cada desmembración formó un sistema político, conforme a sus intereses y situación, o siguiendo la ambición particular de algunos jefes, familias, o corporaciones; con esta notable diferencia que aquellos miembros dispersos volvían a restablecer sus antiguas naciones con las alteraciones que exigían las cosas o los sucesos; mas nosotros, que apenas conservamos vestigios de lo que en otro tiempo fue, y que por otra parte, no somos indios, ni europeos, sino una especie media entre los legítimos propietarios del país, y los usurpadores españoles; en suma, siendo nosotros americanos por nacimiento, y nuestros derechos los de <placeName>Europa</placeName>, tenemos que disputar estos a los del país, y que mantenernos en él contra la invasión de los invasores; así nos hallamos en el caso más extraordinario y complicado.
+      </p>
+      
+      
+      
+      <p>
+        No obstante que es una especie de adivinación indicar cuál será el resultado de la línea de política que la <placeName>América</placeName> siga, me atrevo a aventurar algunas conjeturas que desde luego caracterizo de arbitrarias, dictadas por un deseo racional, y no por un raciocinio probable.
+      </p>
+      
+      
+      
+      <p>
+        La posición de <pb n="13"/> los moradores del hemisferio americano ha sido por siglos puramente pasiva; su existencia política era nula. Nosotros estábamos en un grado todavía más abajo de la servidumbre, y por lo mismo con más dificultad para elevarnos al goce de la libertad. Permítame <choice><abbr>V.</abbr><expan>usted</expan></choice> estas consideraciones para elevar la cuestión. Los estados son esclavos por la naturaleza de su constitución o por el abuso de ella; luego, un pueblo es esclavo cuando el gobierno, por su esencia o por sus vicios, holla y usurpa los derechos del ciudadano o súbdito. Aplicando estos principios, hallaremos que la <placeName>América</placeName> no solamente estaba privada de su libertad, sino también de la tiranía activa y dominante. Me explicaré. En las administraciones absolutas no se reconocen límites en el ejercicio de las facultades gubernativas: la voluntad del <name>Gran Sultán</name>, <name>Kan</name>, <name>Dey</name> y demás soberanos despóticos, es la ley suprema, y esta es casi arbitrariamente ejecutada por los bajaes, kanes y sátrapas subalterno de la <placeName>Turquía</placeName> y <placeName>Persia</placeName>, que tienen organizada una opresión de que participan los subditos en razón de la autoridad que se les confía. A ellos está encargada la administración civil, militar, política, de rentas, y la religión. Pero al fin son persas los jefes de <placeName>Hispahan</placeName> son turcos los visires del gran señor, son tártaros los sultanes de la <placeName>Tartaria</placeName>. La <placeName>China</placeName> no envía a buscar mandatarios militares y letrados al país de <name>Gengis Kan</name> que la conquistó, a pesar de que los actuales chinos son descendientes directos de los subyugados por los ascendientes de los presentes tártaros.
+      </p>
+      
+      
+      
+      <p>
+        ¡Cuán diferente era entre nosotros! Se nos vejaba con una conducta que, además de privarnos de los derechos que nos correspondían, nos dejaba en una especie de infancia permanente con respecto a las transacciones públicas. Si hubiésemos siquiera manejado nuestros <pb n="14"/> asuntos domésticos en nuestra administración interior, conoceríamos el curso de los negocios públicos y su mecanismo. Gozaríamos también de la consideración personal que impone a los ojos del pueblo cierto respeto maquinal, que es tan necesario conservar en las revoluciones. He aquí porque he dicho que estábamos privados hasta de la tiranía activa, pues que no nos está permitido ejercer sus funciones.
+      </p>
+      
+      
+      
+      <p>
+        Los americanos, en el sistema español que está en vigor, y quizá con mayor fuerza que nunca, no ocupan otro lugar en la sociedad que el de siervos propios para el trabajo, y cuando más el de simples consumidores; y aun esta parte coartada con restricciones chocantes; tales son las prohibiciones del cultivo de frutos de <placeName>Europa</placeName>, el estanco de las producciones que el rey monopoliza, el impedimento de las fábricas que la misma península no posee, los privilegios exclusivos del comercio hasta de los objetos de primera necesidad; las trabas entre provincias y provincias americanas para que no se traten, entiendan, ni negocien; en fin ¿quiere <choice><abbr>V.</abbr><expan>usted</expan></choice> saber cuál era nuestro destino? Los campos para cultivar el añil, la grana, el café, la caña, el cacao y el algodón; las llanuras solitarias para criar ganados; los desiertos para cazar las bestias feroces; las entrañas de la tierra para excavar el oro, que no puede saciar a esa nación avarienta.
+      </p>
+      
+      
+      
+      <p>
+        Tan negativo era nuestro estado que no encuentro semejante en ninguna otra asociación civilizada, por más que recorro la serie de las edades y la política de todas las naciones. Pretender que un país tan felizmente constituido, extenso, rico y <pb n="15"/> populoso, sea meramente pasivo ¿no es un ultraje y una violación de los derechos de la humanidad?
+      </p>
+      
+      
+      
+      <p>
+        Estábamos, como acabo de exponer, abstraídos y, digámoslo así, ausentes del universo en cuanto es relativo a la ciencia del gobierno y administración del Estado. Jamás éramos virreyes ni gobernadores, sino por causas muy extraordinarias; arzobispos y obispos, pocas veces; diplomáticos, nunca; militares, sólo en calidad de subalternos; nobles, sin privilegios reales; no éramos, en fin, ni magistrados ni financistas, y casi ni aun comerciantes; todo en contravención directa de nuestras instituciones.
+      </p>
+      
+      
+      
+      <p>
+        El emperador <name>Carlos V</name> formó un pacto con los descubridores, conquistadores y pobladores de <placeName>América</placeName> que, como dice Guerra, es nuestro contrato social. Los reyes de <placeName>España</placeName> convinieron solemnemente con ellos que lo ejecutasen por su cuenta y riesgo, prohibiéndoseles hacerlo a costa de la real hacienda, y por esta razón se les concedía que fuesen señores de la tierra, que organizasen la administración y ejerciesen la judicatura en apelación; con otras muchas exenciones y privilegios que sería prolijo detallar. El rey se comprometió a no enajenar jamás las provincias americanas, como que a él no tocaba otra jurisdicción que la del alto dominio, siendo una especie de propiedad feudal la que allí tenían los conquistadores para sí y sus descendientes. Al mismo tiempo existen leyes expresas que favorecen casi exclusivamente a los naturales del país, originarios de <placeName>España</placeName>, en cuanto a los empleos civiles, eclesiásticos y de rentas.
+      </p>
+      
+      
+      
+      <p>
+        Por manera que con una violación <pb n="16"/> manifiesta de las leyes y de los pactos subsistentes, se han visto despojar aquellos naturales de la autoridad constitucional que les daba su código.
+      </p>
+      
+      
+      
+      <p>
+        De cuanto he referido, será fácil colegir que la <placeName>América</placeName> no estaba
+        preparada para desprenderse de la metrópoli, como súbitamente sucedió por el efecto de las
+        ilegítimas cesiones de <name>Bayona</name> y por la inicua guerra que la regencia nos
+        declaró sin derecho alguno para ello, no sólo por la falta de justicia, sino también de
+        legitimidad. Sobre la naturaleza de los gobiernos españoles, sus decretos conminatorios y
+        hostiles, y el curso entero de su desesperada conducta, hay escritos del mayor mérito en el
+        periódico <title type="periódico">El Español</title>, cuyo autor es el <name>Sr. Blanco</name>; y estando allí esta parte de nuestra historia muy bien tratada, me limito a indicarlo.
+      </p>
+      
+      
+      
+      <p>
+        Los americanos han subido de repente y sin los conocimientos previos, y, lo que es más sensible, sin la práctica de los negocios públicos, a representar en la escena del mundo las eminentes dignidades de legisladores, magistrados, administradores del erario, diplomáticos, generales, y cuantas autoridades supremas y subalternas forman la jerarquía de un Estado organizado con regularidad.
+      </p>
+      
+      
+      
+      <p>
+        Cuando las águilas francesas sólo respetaron los muros de la ciudad de Cádiz, y con su vuelo arrollaron a los frágiles gobiernos de la Península, entonces quedamos en la orfandad. Ya antes habíamos sido entregados a la merced de un usurpador extranjero Después, lisonjeados con la justicia que se nos debía con esperanzas halagüeñas siempre burladas; <pb n="17"/> por último, inciertos sobre nuestro destino futuro, y amenazados por la anarquía, a causa de la falta de un gobierno legítimo, justo y liberal, nos precipitamos en el caos de la revolución. En el primer momento sólo se cuidó de proveer a la seguridad interior, contra los enemigos que encerraba nuestro seno.
+      </p>
+      
+      
+      
+      <p>
+        Luego se extendió a la seguridad exterior; se establecieron autoridades que sustituimos a las que acabábamos de deponer encargadas de dirigir el curso de nuestra revolución y de aprovechar la coyuntura feliz en que nos fuese posible fundar un gobierno constitucional digno del presente siglo y adecuado a nuestra situación. Todos los nuevos gobiernos marcaron sus primeros pasos con el establecimiento de juntas populares. Estas formaron en seguidas reglamentos para la convocación de congresos que produjeron alteraciones importantes. <placeName>Venezuela</placeName> erigió un gobierno democrático y federal, declarando previamente los derechos del hombre, manteniendo el equilibrio de los poderes y estatuyendo leyes generales en favor de la libertad civil, de imprenta y otras; finalmente, se constituyó un gobierno independiente.
+      </p>
+      
+      
+      
+      <p>
+        La <placeName>Nueva Granada</placeName> siguió con uniformidad los establecimientos políticos y cuantas reformas hizo <placeName>Venezuela</placeName>, poniendo por base fundamental de su Constitución el sistema federal más exagerado que jamás existió; recientemente se ha mejorado con respecto al poder ejecutivo general, que ha obtenido cuantas atribuciones le corresponden. Según entiendo, Buenos <pb n="1"/> Aires y <placeName>Chile</placeName> han seguido esta misma línea de operaciones; pero como nos hallamos a tanta distancia, los documentos son tan raros, y las noticias tan inexactas, no me animaré ni aun a bosquejar el cuadro de sus transacciones.
+      </p>
+      
+      
+      
+      <p>
+        Los sucesos de <placeName>México</placeName> han sido demasiado varios, complicados, rápidos y desgraciados, para que se puedan seguir en el curso de su revolución. Carecemos, además, de documentos bastante instructivos, que nos hagan capaces de juzgarlos. Los independientes de <placeName>México</placeName>, por lo que sabemos, dieron principio a su insurrección en setiembre de 1810, y un año después, ya tenían centralizado su gobierno en <placeName>Zitácuaro</placeName> instalado allí una Junta Nacional bajo los auspicios de <name>Fernando VII</name>, en cuyo nombre se ejercían las funciones gubernativas.
+      </p>
+      
+      
+      
+      <p>
+        Por los acontecimientos de la guerra, esta Junta se trasladó a diferentes lugares, y es verosímil que se haya conservado hasta estos últimos momentos, con las modificaciones que los sucesos hayan exigido. Se dice que ha creado un generalísimo o dictador que lo es el ilustre general Morelos otros hablan del célebre general <name>Rayón</name>; lo cierto es que uno de estos dos grandes hombres o ambos separadamente ejercen la autoridad suprema en aquel país; y recientemente ha aparecido una Constitución para el régimen del Estado. En <date when="1812-03">marzo de 1812</date> el gobierno residente en <placeName>Zultepec</placeName> presentó un plan de paz y guerra al virrey de <placeName>México</placeName> concebido con la más profunda sabiduría. En él se reclamó el derecho de gentes estableciendo principios de una <pb n="19"/> exactitud incontestable. Propuso la Junta que la guerra se hiciese como entre hermanos y conciudadanos, pues que no debía ser más cruel que entre naciones extranjeras; que los derechos de gentes y de guerra, inviolables para los mismos infieles y bárbaros, debían serlo más para cristianos, sujetos a un soberano y a unas mismas leyes; que los prisioneros no fuesen tratados como reos de lesa majestad, ni se degollasen los que rendían las armas, sino que se mantuviesen en rehenes para canjearlos; que no se entrase a sangre y fuego en las poblaciones pacíficas, no las diezmasen ni quintasen para sacrificarlas, y concluye que, en caso de no admitirse este plan, se observarían rigorosamente las represalias. Esta negociación se trató con el más alto desprecio; no se dio respuesta a la Junta Nacional; las comunicaciones originales se quemaron públicamente en la plaza de <placeName>México</placeName>, por mano del verdugo; y la guerra de exterminio continuó por parte de los españoles con su furor acostumbrado, mientras que los mexicanos y las otras naciones americanas no la hacían, ni aun a muerte con los prisioneros de guerra que fuesen españoles. Aquí se observa que por causas de conveniencia se conservó la apariencia de sumisión al rey y aún a la Constitución de la monarquía. Parece que la Junta Nacional es absoluta en el ejercicio de las funciones legislativa, ejecutiva y judicial, y el número de sus miembros muy limitado.
+      </p>
+      
+      
+      
+      <p>
+        Los acontecimientos de la Tierra Firme nos han probado que las instituciones perfectamente representativas no son adecuadas a nuestro carácter, <pb n="2"/> costumbres y luces actuales. En Caracas el espíritu de partido tomó su origen en las sociedades, asambleas, y elecciones populares; y estos partidos nos tornaron a la esclavitud. Y así como <placeName>Venezuela</placeName> ha sido la república americana que más se ha adelantado en sus instituciones políticas, también ha sido el más claro ejemplo de la ineficacia de la forma demócrata y federal para nuestros nacientes Estados. En <placeName>Nueva Granada</placeName> las excesivas facultades de los gobiernos provinciales y la falta de centralización en el general, han conducido aquel precioso país al estado a que se ve reducido en el día. Por esta razón sus débiles enemigos se han conservado contra todas las probabilidades. En tanto que nuestros compatriotas no adquieran los talentos y las virtudes políticas que distinguen a nuestros hermanos del Norte, los sistemas enteramente populares, lejos de sernos favorables, temo mucho que vengan a ser nuestra ruina. Desgraciadamente, estas cualidades parecen estar muy distantes de nosotros en el grado que se requiere; y por el contrario, estamos dominados de los vicios que se contraen bajo la dirección de una nación como la española, que sólo ha sobresalido en fiereza, ambición, venganza y codicia.
+      </p>
+      
+      
+      
+      <p>
+        Es más difícil, dice Montesquieu, sacar un pueblo de la servidumbre, que subyugar uno libre. Esta verdad está comprobada por los anales de todos los tiempos, que nos muestran las más de las naciones libres sometidas al yugo, y muy pocas de las esclavas recobrar su libertad. A pesar de este convencimiento, los meridionales de este continente <pb n="22"/> han manifestado el conato de conseguir instituciones liberales, y aun perfectas; sin duda, por efecto del instinto que tienen todos los hombres de aspirar a su mejor felicidad posible, la que se alcanza infaliblemente en las sociedades civiles, cuando ellas están fundadas sobre las bases de la justicia, de la libertad, y de la igualdad. Pero ¿seremos nosotros capaces de mantener en su verdadero equilibrio la difícil carga de una República? ¿Se puede concebir que un pueblo recientemente desencadenado, se lance a la esfera de la libertad, sin que, como a <name>Ícaro</name>, se le deshagan las alas y recaiga en el abismo? Tal prodigio es inconcebible, nunca visto. Por consiguiente, no hay un raciocinio verosímil que nos halague con esta esperanza.
+      </p>
+      
+      
+      
+      <p>
+        Yo deseo más que otro alguno ver formar en <placeName>América</placeName> la más grande nación del mundo, menos por su extensión y riquezas que por su libertad y gloria. Aunque aspiro a la perfección del gobierno de mi patria, no puedo persuadirme que el <placeName ref="#America">Nuevo Mundo</placeName> sea por el momento regido por una gran república; como es imposible, no me atrevo a desearlo; y menos deseo aún una monarquía universal de <placeName>América</placeName>, porque este proyecto, sin ser útil, es también imposible. Los abusos que actualmente existen no se reformarían, y nuestra regeneración sería infructuosa. Los Estados americanos han menester de los cuidados de gobiernos paternales que curen las llagas y las heridas del despotismo y la guerra. La metrópoli, por ejemplo, sería <placeName>México</placeName>, que es la única que puede serlo por su poder intrínseco, sin el cual no hay metrópoli. Supongamos que fuese el <placeName>Istmo de Panamá</placeName>, punto céntrico para todos los extremos de este vasto continente; ¿no continuarían éstos en la languidez, y aún en el desorden actual? Para que un solo gobierno dé vida, <pb n="22"/> anime, ponga en acción todos los resortes de la prosperidad pública, corrija, ilustre y perfeccione al <placeName ref="#America">Nuevo Mundo</placeName>, sería necesario que tuviese las facultades de un Dios, y cuando menos las luces y virtudes de todos los hombres.
+      </p>
+      
+      
+      
+      <p>
+        El espíritu de partido que al presente agita a nuestros Estados, se encendería entonces con mayor encono, hallándose ausente la fuente del poder que únicamente puede reprimirlo. Además, los magnates de las capitales no sufrirían la preponderancia de los metropolitanos, a quienes considerarían como a otros tantos tiranos; sus celos llegarían hasta el punto de coma parar a éstos con los odiosos españoles. En fin, una monarquía semejante sería un coloso diforme, que su propio peso desplomaría a la menor convulsión.
+      </p>
+      
+      
+      
+      <p>
+        <name>Mr. de Pradt</name> ha dividido sabiamente a la <placeName>América</placeName> en <num value="15">15</num> a <num value="17">17</num> Estados independientes entre sí, gobernados por otros tantos monarcas. Estoy de acuerdo en cuanto a lo primero, pues la <placeName>América</placeName> comporta la creación de <num value="17">17</num> naciones; en cuanto a lo segundo, aunque es más fácil conseguirlo, es menos útil; y así, no soy de la opinión de las monarquías americanas. He aquí mis razones. El interés bien entendido de una república se circunscribe en la esfera de su conservación, prosperidad y gloria. No ejerciendo la libertad imperio, porque es precisamente su opuesto, ningún estímulo excita a los republicanos a extender los términos de su nación, en detrimento de sus propios medios, con el único objeto de hacer participar a sus vecinos de una constitución liberal. Ningún derecho adquieren, ninguna ventaja sacan <pb n="23"/> venciéndolos, a menos que los reduzcan a colonias, conquistas, o aliados, siguiendo el ejemplo de <placeName>Roma</placeName>. Máximas y ejemplos tales están en oposición directa con los principios de justicia de los sistemas republicanos; y aun diré más, en oposición manifiesta con los intereses de sus ciudadanos; porque un Estado demasiado extenso en sí mismo o por sus dependencias, al cabo viene en decadencia, y convierte su forma libre en otra tiránica; relaja los principios que deben conservarla, y ocurre por último al despotismo. El distintivo de las pequeñas repúblicas es la permanencia; el de las grandes es vario, pero siempre se inclina al imperio. Casi todas las primeras han tenido una larga duración; de las segundas sólo <placeName>Roma</placeName> se mantuvo algunos siglos, pero fue porque era república la capital y no lo era el resto de sus dominios, que se gobernaban por leyes e instituciones diferentes.
+      </p>
+      
+      
+      
+      <p>
+        Muy contraria es la política de un rey, cuya inclinación constante se dirige al aumento de sus posesiones, riquezas y facultades; con razón, porque su autoridad crece con estas adquisiciones, tanto con respecto a sus vecinos como a sus propios vasallos, que temen en él un poder tan formidable cuanto es su imperio, que se conserva por medio de la guerra y de las conquistas. Por estas razones pienso que los americanos, ansiosos de paz, ciencias, artes, comercio y agricultura, preferirían las repúblicas a los reinos, y me parece que estos deseos se conforman con las miras de la <placeName>Europa</placeName>. No convengo en el sistema federal entre los populares <pb n="24"/> y representativos, por ser demasiado perfecto y exigir virtudes y talentos políticos muy superiores a los nuestros; por igual razón rehúso la monarquía mixta de aristocracia y democracia que tanta fortuna y esplendor ha procurado a la <placeName>Inglaterra</placeName>. No siéndonos posible lograr entre las repúblicas y monarquías lo más perfecto y acabado, evitemos caer en anarquías demagógicas o en tiranías monocratas. Busquemos un medio entre extremos opuestos que nos conducirían a los mismos escollos, a la infelicidad y al deshonor. Voy a arriesgar el resultado de mis cavilaciones sobre la suerte futura de la <placeName>América</placeName>; no la mejor, sino la que le sea más asequible.
+      </p>
+      
+      
+      
+      <p>
+        Por la naturaleza de las localidades, riquezas, población y carácter de los mexicanos, imagino que intentarán al principio establecer una república representativa, en la cual tenga grandes atribuciones el poder ejecutivo, concentrándolo en un individuo que si desempeña sus funciones con acierto y justicia, casi naturalmente vendrá a conservar una autoridad vitalicia. Si su incapacidad o violenta administración excita una conmoción popular que triunfe, este mismo poder ejecutivo quizás se difundirá en una asamblea. Si el partido preponderante es militar o aristocrático, exigirá probablemente una monarquía, que al principio será limitada y constitucional y después inevitablemente <pb n="25"/> declinará en absoluta; pues debemos convenir en que nada hay más difícil en el orden político que la conservación de una monarquía mixta; y también es preciso convenir en que sólo un pueblo tan patriota como el inglés es capaz de contener la autoridad de un rey y de sostener el espíritu de libertad bajo un cetro y una corona.
+      </p>
+      
+      
+      
+      <p>
+        Los Estados del <placeName>Istmo de Panamá</placeName> hasta <placeName>Guatemala</placeName> formarán quizás una asociación. Esta magnífica posición entre los dos grandes mares podrá ser con el tiempo el emporio del universo. Sus canales acortarán las distancias del mundo; estrecharán los lazos comerciales de <placeName>Europa</placeName>, <placeName>América</placeName> y <placeName>Asia</placeName>; traerán a tan feliz región los tributos de las cuatro partes del globo. ¡Acaso sólo allí podrá fijarse algún día la capital de la tierra, como prentendió <name>Constantino</name> que fuese <placeName>Bizancio</placeName> la del antiguo hemisferio!
+      </p>
+      
+      
+      
+      <p>
+        La <placeName>Nueva Granada</placeName> se unirá con <placeName>Venezuela</placeName>, si llegan a convenirse en formar una república central, cuya capital sea Maracaibo o una nueva ciudad que, con el nombre de Las Casas (en honor de este héroe de la filantropía), se funde entre los confines de ambos países, en el soberbio puerto de <placeName>Bahíahonda</placeName>. Esta posición, aunque desconocida, es más ventajosa por todos respectos. Su acceso es fácil, y su situación tan fuerte, que puede hacerse inexpugnable. Posee un clima puro y saludable, un territorio tan propio para la agricultura como para la cría de ganados, y una grande abundancia de maderas de construcción. Los salvajes <pb n="26"/> que la habitan serían civilizados, y nuestras posesiones se aumentarían con la adquisición de la <placeName>Goajira</placeName>. Esta nación se llamaría <placeName>Colombia</placeName> como un tributo de justicia y gratitud al criador de nuestro hemisferio Su gobierno podrá imitar al inglés; con la diferencia de que en lugar de un rey habrá un poder ejecutivo electivo, cuando más vitalicio, y jamás hereditario si se quiere república; una cámara o senado legislativo hereditario, que en las tempestades políticas se interponga entre las olas populares y los rayos del gobierno, y un cuerpo legislativo de libre elección, sin otras restricciones que las de la Cámara Baja de <placeName>Inglaterra</placeName>. Esta constitución participaría de todas formas, y yo deseo que no participe de todos los vicios. Como esta es mi patria, tengo un derecho incontestable para desearla lo que en mi opinión es mejor. Es muy posible que la <placeName>Nueva Granada</placeName> no convenga en el reconocimiento de un gobierno central, porque es en extremo adicta a la federación; y entonces formará por sí sola un Estado que, si subsiste, podrá ser muy dichoso por sus grandes recursos de todos géneros.
+      </p>
+      
+      
+      
+      <p>
+        Poco sabemos de las opiniones que prevalecen en <placeName>Buenos Aires</placeName>, <placeName>Chile</placeName> y el <placeName>Perú</placeName>; juzgando por lo que se trasluce y por las apariencias, en <placeName>Buenos Aires</placeName> habrá un gobierno central en que los militares se lleven la primacía <pb n="27"/> por consecuencia de sus divisiones intestinas y guerras externas. Esta constitución degenerará necesariamente en una oligarquía o una monocracia, con más o menos restricciones, y cuya denominación nadie puede adivinar. Sería doloroso que tal cosa sucediese, porque aquellos habitantes son acreedores a la más espléndida gloria.
+      </p>
+      
+      
+      
+      <p>
+        El reino de <placeName>Chile</placeName> está llamado por la naturaleza de su situación, por las costumbres inocentes y virtuosas de sus moradores, por el ejemplo de sus vecinos, los fieros republicanos del <placeName>Arauco</placeName> a gozar de las bendiciones que derraman las justas y dulces leyes de una república. Si alguna permanece largo tiempo en <placeName>América</placeName>, me inclino a pensar que será la chilena. Jamás se ha extinguido allí el espíritu de libertad; los vicios de la <placeName>Europa</placeName> y del <placeName><placeName>Asia</placeName></placeName> llegarán tarde o nunca a corromper las costumbres de aquel extremo del universo. Su territorio es limitado; estará siempre fuera del contacto inficionado del resto de los hombres; no alterará sus leyes, usos y prácticas; preservará su uniformidad en opiniones políticas y religiosas; en una palabra, <placeName>Chile</placeName> puede ser libre.
+      </p>
+      
+      
+      
+      <p>
+        El <placeName>Perú</placeName>, por el contrario, encierra dos elementos enemigos de todo régimen justo y liberal: oro y esclavos. El primero lo corrompe todo; el segundo está corrompido por sí mismo. El alma de un siervo rara vez alcanza a apreciar la sana libertad; se enfurece en los tumultos, o se humilla en las cadenas. Aunque estas reglas serían aplicables a toda la <pb n="28"/> <placeName>América</placeName>, creo que con más justicia las merece <placeName>Lima</placeName> por los conceptos que he expuesto y por la cooperación que ha prestado a sus señores contra sus propios hermanos, los ilustres hijos de <placeName>Quito</placeName>, <placeName>Chile</placeName> y <placeName>Buenos Aires</placeName>. Es constante que el que aspira a obtener la libertad, a lo menos lo intenta. Supongo que en <placeName>Lima</placeName> no tolerarán los ricos la democracia, ni los esclavos y pardos libertos la aristocracia; los primeros preferirán la tiranía de uno solo, por no padecer las persecuciones tumultuarias y por establecer un orden siquiera pacífico. Mucho hará si concibe recobrar su independencia.
+      </p>
+      
+      
+      
+      <p>
+        De todo lo expuesto, podemos deducir estas consecuencias: las provincias americanas se hallan lidiando por emanciparse; al fin obtendrán el suceso; algunas se constituirán de un modo regular en repúblicas federales y centrales; se fundarán monarquías casi inevitablemente en las grandes secciones, y algunas serán tan infelices que devorarán sus elementos, ya en la actual, ya en las futuras revoluciones; que una gran monarquía no será fácil consolidar; una gran república imposible.
+      </p>
+      
+      
+      
+      <p>
+        Es una idea grandiosa pretender formar de todo el mundo nuevo una sola nación con un solo vínculo que ligue sus partes entre sí y con el todo. Ya que tiene un origen, una lengua, unas costumbres y una religión, debería por consiguiente tener un solo gobierno que confederase los diferentes Estados que hayan de formarse; mas no es posible porque climas remotos, <pb n="29"/> situaciones diversas, intereses opuestos, caracteres desemejantes, dividen a la <placeName>América</placeName>. ¡Qué bello sería que el <placeName>Istmo de Panamá</placeName> fuese para nosotros lo que el de <placeName>Corinto</placeName> para los griegos! Ojalá que algún día tengamos la fortuna de instalar allí un augusto congreso de los representantes de las repúblicas, reinos e imperios, a tratar y discutir sobre los altos intereses de la paz y de la guerra con las naciones de las otras tres partes del mundo. Esta especie de corporación podrá tener lugar en alguna época dichosa de nuestra regeneración; otra esperanza es infundada, semejante a la del abate <name>St. Fierre</name> que concibió el laudable delirio de reunir un congreso europeo para decidir de la suerte y de los intereses de aquellas naciones.
+      </p>
+      
+      
+      
+      <p>
+        <q>Mutaciones importantes y felices, continúa, pueden ser frecuentemente producidas por efectos individuales. Los americanos meridionales tienen una tradición que dice que cuando <placeName>Quetralcohuatl</placeName>, el <placeName>Hermes</placeName> o <placeName>Buhda </placeName>de la <placeName><placeName>América del Sur</placeName></placeName>, resignó su administración y los abandonó, les prometió que volvería después que los siglos designados hubiesen pasado, y que él restablecería su gobierno y renovaría su felicidad. Esta tradición, ¿no opera y excita una convicción de que muy pronto debe volver? ¿concibe <choice><abbr>V.</abbr><expan>usted</expan></choice> cuál será el efecto que producirá, si un individuo apareciendo entre ellos demostrase los caracteres de <name>Quetralcahualt</name>, el <name>Buhda</name> del bosque, o <name>Mercurio</name>, del cual han hablado tanto las otras naciones? ¿No cree <choice><abbr>V.</abbr><expan>usted</expan></choice> que esto inclinaría todas las partes? ¿no es la unión todo lo que se necesita para ponerlos en estado de expulsar a los españoles, sus tropas, <pb n="30"/> y los partidarios de la corrompida <placeName>España</placeName>, para hacerlos capaces de establecer un imperio poderoso, con un gobierno libre, y leyes benévolas?</q>
+      </p>
+      
+      
+      
+      <p>
+        Pienso como <choice><abbr>V.</abbr><expan>usted</expan></choice> que causas individuales pueden producir resultados generales, sobre todo en las revoluciones. Pero no es el héroe, gran profeta, o Dios del <name>Anahuac</name>, <name>Quetralcohualt</name>, el que es capaz de operar los prodigiosos beneficios que <choice><abbr>V.</abbr><expan>usted</expan></choice> propone. Este personaje es apenas conocido del pueblo mexicano, y no ventajosamente; porque tal es la suerte de los vencidos aunque sean Dioses. Sólo los historiadores y literatos se han ocupado cuidadosamente en investigar su origen, verdadera o falsa misión, sus profecías y el término de su carrera. Se disputa si fue un apóstol de <name>Cristo</name> o bien pagano. Unos suponen que su nombre quiere decir <name>Santo Tomás</name> otros que <name>Culebra Emplumajada</name>; y otros dicen que es el famoso profeta de <placeName>Yucatán</placeName> <name>Chilan-Cambal</name>. En una palabra, los más de los autores mexicanos, polémicos e historiadores profanos, han tratado con más o menos extensión la cuestión sobre el verdadero carácter de <name>Quetralcohuatl</name>. El hecho es, según dice <name>Acosta</name> que él estableció una religión, cuyos ritos, dogmas y misterios tenían una admirable afinidad con la de <name>Jesús</name>, y que quizás es la más semejante a ella. No obstante esto, muchos escritores católicos han procurado alejar la idea de que este profeta fuese verdadero, sin querer reconocer en él a un <name>Santo Tomás</name> como lo afirman otros célebres autores. La opinión general es que <name>Quetralcohuatl</name> es un legislador divino entre los pueblos paganos de <pb n="31"/> Anahuac, del cual era lugarteniente el gran <name>Motekzoma</name>, derivando de él su autoridad. De aquí se infiere que nuestros mexicanos no seguirían al gentil <name>Quetralcohuatl</name>, aunque pareciese bajo las formas más idénticas y favorables, pues que profesan una religión la más intolerante y exclusiva de las otras.
+      </p>
+      
+      
+      
+      <p>
+        Felizmente, los directores de la independencia de <placeName>México</placeName> se han aprovechado del fanatismo con el mejor acierto, proclamando a la famosa virgen de <placeName>Guadalupe</placeName> por reina de los patriotas, invocándola en todos los casos arduos y llevándola en sus banderas. Con esto, el entusiasmo político ha formado una mezcla con la religión que ha producido un fervor vehemente por la sagrada causa de la libertad. La veneración de esta imagen en <placeName>México</placeName> es superior a la más exaltada que pudiera inspirar el más diestro profeta.
+      </p>
+      
+      
+      
+      <p>
+        Seguramente la unión es la que nos falta para completar la obra de nuestra regeneración. Sin embargo, nuestra división no es extraña, porque tal es el distintivo de las guerras civiles formadas generalmente entre dos partidos: conservadores y reformadores. Los primeros son, por lo común, más numerosos, porque el imperio de la costumbre produce el efecto de la obediencia a las potestades establecidas; los últimos son siempre menos numerosos aunque más vehementes e ilustrados. De este modo la <pb n="32"/> masa física se equilibra con la fuerza moral, y la contienda se prolonga, siendo sus resultados muy inciertos. Por fortuna, entre nosotros la masa ha seguido a la inteligencia.
+      </p>
+      
+      
+      
+      <p>
+        Yo diré a <choice><abbr>V.</abbr><expan>usted</expan></choice> lo que puede ponernos en aptitud de expulsar a los españoles, y de fundar un gobierno libre. Es la unión, ciertamente; mas esta unión no nos vendrá por prodigios divinos, sino por efectos sensibles y esfuerzos bien dirigidos. La <placeName>América</placeName> está encontrada entre sí, porque se halla abandonada de todas las naciones, aislada en medio del universo, sin relaciones diplomáticas ni auxilios militares y combatida por la <placeName>España</placeName> que posee más elementos para la guerra, que cuantos nosotros furtivamente podemos adquirir.
+      </p>
+      
+      
+      
+      <p>
+        Cuando los sucesos no están asegurados, cuando el Estado es débil, y cuando las empresas son remotas, todos los hombres vacilan; las opiniones se dividen, las pasiones las agitan, y los enemigos las animan para triunfar por este fácil medio. Luego que seamos fuertes, bajo los auspicios de una nación liberal que nos preste su protección, se nos verá de acuerdo cultivar las virtudes y los talentos que conducen a la gloria: entonces seguiremos la marcha majestuosa hacia las grandes prosperidades a que está destinada la <placeName>América Meridional</placeName>; entonces las ciencias y las artes que nacieron en el Oriente y han ilustrado la <placeName>Europa</placeName>, volarán a <placeName>Colombia</placeName> libre que las convidará con un asilo.
+      </p>
+      
+      
+      
+      <p>
+        Tales son, señor, las observaciones y pensamientos que tengo el honor de someter a <choice><abbr>V.</abbr><expan>usted</expan></choice> para que los rectifique o deseche según su mérito; suplicándole se persuada que me he atrevido a exponerlos, más por no ser descortés, que porque me crea capaz de ilustrar a <choice><abbr>V.</abbr><expan>usted</expan></choice> en la materia.
+      </p>
+      
+      
+      <closer>
+        <salute>Soy de <choice><abbr>Ud.</abbr><expan>usted</expan></choice> &amp;.&amp;.&amp;.</salute>
+    <placeName>Kingston</placeName>, 
+        <date when="1815-09-06">setiembre 6 de 1815</date>.
+      </closer>
+      
+      
+    </body>
+    
+  </text>
+  
+</TEI>
